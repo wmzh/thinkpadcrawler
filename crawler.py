@@ -53,7 +53,7 @@ def get_model_parameter(model_number, force):
 def generate_model_table_html(model):
     title = "All " + model["name"] + " Models"
     page = PyH(title)
-    page.addCSS('colors.css')
+    page.addCSS('table.css')
     mytab = page << table()
     mytab << caption(title)
     mytab << colgroup(col())
