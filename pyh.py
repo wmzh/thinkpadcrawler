@@ -88,7 +88,7 @@ class Tag(list):
 
     def renderAtt(self):
         result = ''
-        for n, v in self.attributes.iteritems():
+        for n, v in self.attributes.items():
             if n != 'txt' and n != 'open':
                 if n == 'cl': n = 'class'
                 result += ' %s="%s"' % (n, v)
