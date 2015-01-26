@@ -136,7 +136,7 @@ class PyH(Tag):
         for f in arg: self.head += link(rel='stylesheet', type='text/css', href=f)
     
     def printOut(self,file=''):
-        if file: f = open(file, 'w')
+        if file: f = open(file, 'w', encoding='utf8')
         else: f = stdout
         f.write(doctype)
         f.write(self.render())
