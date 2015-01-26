@@ -10,6 +10,11 @@ __author__ = "Emmanuel Turlay <turlay@cern.ch>"
 __version__ = '$Revision: 63 $'
 __date__ = '$Date: 2010-05-21 03:09:03 +0200 (Fri, 21 May 2010) $'
 
+# @modify: Wayne M Zhang 2015-01-25
+# 1. replace the dict's method iteritems() with items() to support Python 3.
+# 2. save html files using utf8 encoding.
+# 3. add new tag support: colgroup, col, caption
+
 from sys import _getframe, stdout, modules, version
 nOpen={}
 
@@ -21,7 +26,9 @@ tags = ['html', 'body', 'head', 'link', 'meta', 'div', 'p', 'form', 'legend',
         'input', 'select', 'span', 'b', 'i', 'option', 'img', 'script',
         'table', 'tr', 'td', 'th', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
         'fieldset', 'a', 'title', 'body', 'head', 'title', 'script', 'br', 'table',
-        'ul', 'li', 'ol']
+        'ul', 'li', 'ol',
+        'colgroup', 'col', 'caption']
+
 
 selfClose = ['input', 'img', 'link', 'br']
 
